@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人走到任何境地都是因为自己]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-05-16T15:16:28.765Z</updated>
+  <updated>2015-05-16T16:24:30.183Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -19,11 +19,17 @@
     <link href="http://www.dreamxuwj.com/2015/05/16/%E6%A2%A6%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     <id>http://www.dreamxuwj.com/2015/05/16/梦的起点/</id>
     <published>2015-05-16T15:16:28.000Z</published>
-    <updated>2015-05-16T15:16:28.765Z</updated>
-    <content type="html"></content>
+    <updated>2015-05-16T16:24:30.183Z</updated>
+    <content type="html"><![CDATA[<h1 id="博客名字（blog_name）">博客名字（blog name）</h1><p>截止*2015-05-16为止，终于拥有了自己的私人空间。也许是感性，也许是喜欢，自己依然</p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<h1 id="博客名字（blog_name）">博客名字（blog name）</h1><p>截止*2015-05-16为止，终于拥有了自己的私人空间。也许是感性，也许是喜欢，自己依然</p>
+]]>
     </summary>
+    
+      <category term="随笔" scheme="http://www.dreamxuwj.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="随笔生活" scheme="http://www.dreamxuwj.com/categories/%E9%9A%8F%E7%AC%94%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
