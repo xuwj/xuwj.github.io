@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人走到任何境地都是因为自己]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-05-17T05:31:22.985Z</updated>
+  <updated>2015-05-30T15:22:58.800Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -15,11 +15,94 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[android studio离线更新]]></title>
+    <link href="http://www.dreamxuwj.com/2015/05/28/android%20studio%E7%A6%BB%E7%BA%BF%E6%9B%B4%E6%96%B0/"/>
+    <id>http://www.dreamxuwj.com/2015/05/28/android studio离线更新/</id>
+    <published>2015-05-28T03:53:29.000Z</published>
+    <updated>2015-05-30T15:22:58.800Z</updated>
+    <content type="html"><![CDATA[<h1 id="为什么进行离线更新？">为什么进行离线更新？</h1><p>很多软件，要是能在线更新，我想没有哪个人会无聊到自己去更新…废话截止…下面讲原因，原因有二</p>
+<ol>
+<li>生活在天朝，伟大的墙<code>GFW</code>阻拦了我们看世界<a id="more"></a></li>
+<li>Google最近发疯，点击<strong>Menu-Help-check for update…</strong> 出现下图，点击以后要你下载整个安装包…<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ图片20150528112043.png" alt=""></li>
+</ol>
+<h1 id="如何进行离线更新？">如何进行离线更新？</h1><h2 id="获取本地自己的版本信息">获取本地自己的版本信息</h2><p>打开<strong>Menu-Help-About</strong>，找到当前安装的版本号,如下图，也可以到自己的<code>android studio</code>安装目录下，找到<code>build.txt</code>文件，打开查看,可以看出我当前的版本号为：<code>135.1740770</code><br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ图片20150528142238.png" alt=""></p>
+<h2 id="获取最新版本信息">获取最新版本信息</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/android/studio/patches/updates.xml</span><br></pre></td></tr></table></figure>
+<p>如下图：可以看出最新的版本号为：<code>141.1903250</code>,以及一些历史版本号,不要以为这些历史版本号没用，亲，还是会用到的，存在即必然…<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ截图20150528140717.png" alt=""></p>
+<h2 id="离线更新包的下载">离线更新包的下载</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/android/studio/patches/AI-<span class="number">135.1740770</span>-<span class="number">141.1901332</span>-patch-win.jar</span><br></pre></td></tr></table></figure>
+<p><code>135.1740770</code>:当前版本号<br><code>141.1901332</code>:最新版本号,也是你自己安装的目标版本号<br>即下载<code>url</code>拼接如下<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="link_url">https://dl.google.com/android/studio/patches/AI-</span>[<span class="link_label">当前安装版本号</span>]-[更新的目标版本]-patch-win.jar</span><br></pre></td></tr></table></figure></p>
+<h2 id="离线更新包的安装">离线更新包的安装</h2><p><code>关闭所有</code>与<code>Android Studio</code>相关的任务,把上一步下载的jar拷贝到某一个目录下（<code>注：不能拷贝到android studio 的安装目录！</code>），启动<code>cmd</code>，将路径定位到jar的相关文件夹中，输入如下命令<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -classpath AI-<span class="number">135.1740770</span>-<span class="number">141.1901332</span>-patch-win<span class="class">.jar</span> com<span class="class">.intellij</span><span class="class">.updater</span><span class="class">.Runner</span> install [android studio的安装目录]</span><br></pre></td></tr></table></figure></p>
+<p>安装过程截图如下：<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/1234.png" alt=""><br>安装完后，重复第一步的步骤，看到版本已经更新到最新了<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ截图20150528145528.png" alt=""></p>
+<p><code>注意事项：</code></p>
+<ul>
+<li>安装的时候一定不要把<code>jar</code>拷贝到<code>android studio</code>的安装目录中！</li>
+<li>安装的时候一定要关闭<code>android studio</code>!<br>如果上面两步不注意，可能出现如下错误<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ图片20150528144931.png" alt=""></li>
+</ul>
+<p>亲，如果还安装不成功，请留言…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="为什么进行离线更新？">为什么进行离线更新？</h1><p>很多软件，要是能在线更新，我想没有哪个人会无聊到自己去更新…废话截止…下面讲原因，原因有二</p>
+<ol>
+<li>生活在天朝，伟大的墙<code>GFW</code>阻拦了我们看世界]]>
+    
+    </summary>
+    
+      <category term="studio离线更新" scheme="http://www.dreamxuwj.com/tags/studio%E7%A6%BB%E7%BA%BF%E6%9B%B4%E6%96%B0/"/>
+    
+      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[android反编译APK的那些事]]></title>
+    <link href="http://www.dreamxuwj.com/2015/05/26/android%E5%8F%8D%E7%BC%96%E8%AF%91APK%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.dreamxuwj.com/2015/05/26/android反编译APK的那些事/</id>
+    <published>2015-05-26T11:41:38.000Z</published>
+    <updated>2015-05-30T05:59:38.224Z</updated>
+    <content type="html"><![CDATA[<p>反编译工具最新下载地址 <a href="http://download.csdn.net/detail/wei18359100306/8741985" target="_blank" rel="external">传送门</a><br><a id="more"></a></p>
+<h1 id="工具介绍：">工具介绍：</h1><ul>
+<li><strong>apktool</strong><br>资源文件获取，可以提取出图片文件和布局文件进行使用查看</li>
+<li><strong>dex2jar</strong><br>将<code>apk</code>反编译成<code>java</code>源码（classes.dex转化成jar文件）</li>
+<li><strong>jd-gui</strong><br>查看<code>classes.dex</code>转化成出的<code>jar</code>文件</li>
+</ul>
+<h1 id="工具使用：">工具使用：</h1><p>具体的过程请看我csdn博客—&gt;<a href="http://blog.csdn.net/wei18359100306/article/details/41547333" target="_blank" rel="external">传送门</a></p>
+<h1 id="-smali文件的查看">.smali文件的查看</h1><p>反编译后我们要看源代码，可能会看到后缀为<code>.smali</code>,那么我们如何查看这种形式的代码，请看博客—&gt;<a href="http://blog.csdn.net/tmacsky/article/details/44081585" target="_blank" rel="external">利用SublimeText查看Android反编译smali文件</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>反编译工具最新下载地址 <a href="http://download.csdn.net/detail/wei18359100306/8741985">传送门</a><br>]]>
+    
+    </summary>
+    
+      <category term="反编译" scheme="http://www.dreamxuwj.com/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
+    
+      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[自定义带动画button]]></title>
+    <link href="http://www.dreamxuwj.com/2015/05/21/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B8%A6%E5%8A%A8%E7%94%BBbutton/"/>
+    <id>http://www.dreamxuwj.com/2015/05/21/自定义带动画button/</id>
+    <published>2015-05-21T14:09:02.000Z</published>
+    <updated>2015-05-30T05:59:38.169Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sendmsgbtn.gif" alt=""><br><a id="more"></a><br>具体代码请看我<a href="https://github.com/xuwj/SendMsgbuttonDemo" target="_blank" rel="external">Github</a>,有疑问的请留言，具体的讲解有时间在说明…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sendmsgbtn.gif" alt=""><br>]]>
+    
+    </summary>
+    
+      <category term="android自定义" scheme="http://www.dreamxuwj.com/tags/android%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[梦的起点]]></title>
     <link href="http://www.dreamxuwj.com/2015/05/16/%E6%A2%A6%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     <id>http://www.dreamxuwj.com/2015/05/16/梦的起点/</id>
     <published>2015-05-16T15:16:28.000Z</published>
-    <updated>2015-05-17T05:31:22.985Z</updated>
+    <updated>2015-05-30T05:59:38.224Z</updated>
     <content type="html"><![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br><a id="more"></a></p>
 <h1 id="Blog_name">Blog name</h1><p>截止<code>2015-05-16</code>为止，终于拥有了自己的私人空间。也许是感性，也许是喜欢，自己依然用梦痕来标识自己。域名也任性的选择了<code>dreamxuwj.com</code>，梦—-一生相伴。</p>
 <h1 id="About_me">About me</h1><p>student of FJNU ,Focus on mobile develop and know some product design</p>
