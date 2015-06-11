@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人走到任何境地都是因为自己]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-05-30T15:22:58.800Z</updated>
+  <updated>2015-06-11T13:53:45.976Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -13,6 +13,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[AndroidStudio中如何使用Git和Github来管理项目]]></title>
+    <link href="http://www.dreamxuwj.com/2015/06/11/Android%20Studio%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Git%E5%92%8CGithub%E6%9D%A5%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://www.dreamxuwj.com/2015/06/11/Android Studio中如何使用Git和Github来管理项目/</id>
+    <published>2015-06-11T13:35:37.000Z</published>
+    <updated>2015-06-11T13:53:45.976Z</updated>
+    <content type="html"><![CDATA[<p>由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的</p>
+<p>As we know，<code>Git</code>是目前世界上最先进的分布式版本控制系统，而<code>Github</code>是最大的开源社区。在<code>Github</code>上的项目就是使用<code>git</code>来管理的，所以学好<code>Git</code>的使用是很有必要的。下面看具体步骤。<br><a id="more"></a><br>1、要在as中使用<code>git</code>，首先你的在本地安装<code>Git</code>，具体安装流程大家可以看我blog：<a href="http://blog.csdn.net/wei18359100306/article/details/41255963" target="_blank" rel="external">版本控制工具Git详解</a>​<br>2、在<code>studio</code>中配置<code>git</code>插件：File-&gt;Setting-&gt;Version Control-&gt;Git, 然后选择你本地的<code>Git</code>安装路径（需要定位到bin目录下的git.exe），然后点击Test测试一下，结果如下图：那么恭喜你，你已经设置成功了！<br><img src="http://img.blog.csdn.net/20150511161822998" alt=""></p>
+<p>3、将项目初始化git项目(<code>git init</code>)，操作如下：VCS-&gt;Enable Control Integration-&gt;Select “Git”.（当然也可以使用git命令，自行选择）<br><img src="http://img.blog.csdn.net/20150511161945740" alt=""><br><img src="http://img.blog.csdn.net/20150511162206767" alt=""></p>
+<p>完成后会出现红框内的按钮<br><img src="http://img.blog.csdn.net/20150511162227952" alt=""></p>
+<p>4、上传项目到Github前的准备-&gt;忽略部分文件（如将gen .idea  .iml等）<br>上传项目前要先扩展插件，以便于忽略一些不必要提交的文件，点击项目根目录下的.gitignore文件，出现下图，点击右上角安装插件<br><img src="http://img.blog.csdn.net/20150511163225571" alt=""></p>
+<p><img src="http://img.blog.csdn.net/20150511163304181" alt=""></p>
+<p>然后你就可以在<code>gitignore</code>中写出你想忽略的那些文件的名字，一般忽略以上文件即可</p>
+<p><strong>note</strong>：很多情况下<code>gitignore</code>是不起作用的，既在你上传到服务器时是不起作用的，这时你可以如下图这样做（第一是添加文件，第二是添加文件夹）<br><img src="http://img.blog.csdn.net/20150511163344429" alt=""></p>
+<p>5、上传项目到Github前的准备-&gt;登陆Github（没有Github账号的请自行去<a href="https://github.com" target="_blank" rel="external">注册</a>）<br><img src="http://img.blog.csdn.net/20150511162715567" alt=""></p>
+<p>6、share到Github（VCS&gt;Import into Version Control&gt;Share Project on GitHub）<br><img src="http://img.blog.csdn.net/20150511163114856" alt=""></p>
+<p>7、添加仓库名称和描述<br><img src="http://img.blog.csdn.net/20150511162114473" alt=""></p>
+<p>8、选择要提交的文件，并对此次提交做一个描述，<strong>对比第四步的note，是不是发现我们ignore掉的文件都没在此出现！</strong><br><img src="http://img.blog.csdn.net/20150511162602497" alt=""></p>
+<p>9、登陆Github，查看仓库<br><img src="http://img.blog.csdn.net/20150511162707021" alt=""></p>
+<h2 id=""><br></h2><p><br><br>既然Github是用来分布式控制版本系统，那我们如何将已经上传到Github的项目<code>Clone</code>到本地呢<br>1、<code>VCS-&gt;Checkout from Version Control-&gt;GitHub</code>,如图选择想要克隆的项目，设置好目录和项目名称，点击<code>Clone</code>即可。Android Studio 会在本地新建一个Project.<br><img src="http://img.blog.csdn.net/20150511163141270" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的</p>
+<p>As we know，<code>Git</code>是目前世界上最先进的分布式版本控制系统，而<code>Github</code>是最大的开源社区。在<code>Github</code>上的项目就是使用<code>git</code>来管理的，所以学好<code>Git</code>的使用是很有必要的。下面看具体步骤。<br>]]>
+    
+    </summary>
+    
+      <category term="Git使用" scheme="http://www.dreamxuwj.com/tags/Git%E4%BD%BF%E7%94%A8/"/>
+    
+      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[android studio离线更新]]></title>

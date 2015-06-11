@@ -4,23 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>自定义带动画button | 梦痕</title>
+    <title>AndroidStudio中如何使用Git和Github来管理项目 | 梦痕</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="dream.xuwj">
     
 
     
-    <meta name="description">
+    <meta name="description" content="由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的
+As we know，Git是目前世界上最先进的分布式版本控制系统，而Github是最大的开源社区。在Github上的项目就是使用git来管理的，所以学好Git的使用是很有必要的。下面看具体步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义带动画button">
-<meta property="og:url" content="http://www.dreamxuwj.com/2015/05/21/自定义带动画button/index.html">
+<meta property="og:title" content="AndroidStudio中如何使用Git和Github来管理项目">
+<meta property="og:url" content="http://www.dreamxuwj.com/2015/06/11/Android Studio中如何使用Git和Github来管理项目/index.html">
 <meta property="og:site_name" content="梦痕">
-<meta property="og:description">
-<meta property="og:image" content="http://7xj4l6.com1.z0.glb.clouddn.com/sendmsgbtn.gif">
+<meta property="og:description" content="由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的
+As we know，Git是目前世界上最先进的分布式版本控制系统，而Github是最大的开源社区。在Github上的项目就是使用git来管理的，所以学好Git的使用是很有必要的。下面看具体步骤。">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511161822998">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511161945740">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162206767">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162227952">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511163225571">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511163304181">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511163344429">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162715567">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511163114856">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162114473">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162602497">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511162707021">
+<meta property="og:image" content="http://img.blog.csdn.net/20150511163141270">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义带动画button">
-<meta name="twitter:description">
+<meta name="twitter:title" content="AndroidStudio中如何使用Git和Github来管理项目">
+<meta name="twitter:description" content="由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的
+As we know，Git是目前世界上最先进的分布式版本控制系统，而Github是最大的开源社区。在Github上的项目就是使用git来管理的，所以学好Git的使用是很有必要的。下面看具体步骤。">
 
     
     <link rel="alternative" href="/atom.xml" title="梦痕" type="application/atom+xml">
@@ -80,14 +95,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/21/自定义带动画button/" title="自定义带动画button" itemprop="url">自定义带动画button</a>
+      <a href="/2015/06/11/Android Studio中如何使用Git和Github来管理项目/" title="AndroidStudio中如何使用Git和Github来管理项目" itemprop="url">AndroidStudio中如何使用Git和Github来管理项目</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-21T14:09:02.000Z" itemprop="datePublished"> 发表于 2015-05-21</time>
+    <time datetime="2015-06-11T13:35:37.000Z" itemprop="datePublished"> 发表于 2015-06-11</time>
     
   </p>
 </header>
@@ -96,11 +111,24 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sendmsgbtn.gif" alt=""><br><a id="more"></a><br>具体代码请看我<a href="https://github.com/xuwj/SendMsgbuttonDemo" target="_blank" rel="external">Github</a>,有疑问的请留言，具体的讲解有时间在说明…</p>
+		<p>由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的</p>
+<p>As we know，<code>Git</code>是目前世界上最先进的分布式版本控制系统，而<code>Github</code>是最大的开源社区。在<code>Github</code>上的项目就是使用<code>git</code>来管理的，所以学好<code>Git</code>的使用是很有必要的。下面看具体步骤。<br><a id="more"></a><br>1、要在as中使用<code>git</code>，首先你的在本地安装<code>Git</code>，具体安装流程大家可以看我blog：<a href="http://blog.csdn.net/wei18359100306/article/details/41255963" target="_blank" rel="external">版本控制工具Git详解</a>​<br>2、在<code>studio</code>中配置<code>git</code>插件：File-&gt;Setting-&gt;Version Control-&gt;Git, 然后选择你本地的<code>Git</code>安装路径（需要定位到bin目录下的git.exe），然后点击Test测试一下，结果如下图：那么恭喜你，你已经设置成功了！<br><img src="http://img.blog.csdn.net/20150511161822998" alt=""></p>
+<p>3、将项目初始化git项目(<code>git init</code>)，操作如下：VCS-&gt;Enable Control Integration-&gt;Select “Git”.（当然也可以使用git命令，自行选择）<br><img src="http://img.blog.csdn.net/20150511161945740" alt=""><br><img src="http://img.blog.csdn.net/20150511162206767" alt=""></p>
+<p>完成后会出现红框内的按钮<br><img src="http://img.blog.csdn.net/20150511162227952" alt=""></p>
+<p>4、上传项目到Github前的准备-&gt;忽略部分文件（如将gen .idea  .iml等）<br>上传项目前要先扩展插件，以便于忽略一些不必要提交的文件，点击项目根目录下的.gitignore文件，出现下图，点击右上角安装插件<br><img src="http://img.blog.csdn.net/20150511163225571" alt=""></p>
+<p><img src="http://img.blog.csdn.net/20150511163304181" alt=""></p>
+<p>然后你就可以在<code>gitignore</code>中写出你想忽略的那些文件的名字，一般忽略以上文件即可</p>
+<p><strong>note</strong>：很多情况下<code>gitignore</code>是不起作用的，既在你上传到服务器时是不起作用的，这时你可以如下图这样做（第一是添加文件，第二是添加文件夹）<br><img src="http://img.blog.csdn.net/20150511163344429" alt=""></p>
+<p>5、上传项目到Github前的准备-&gt;登陆Github（没有Github账号的请自行去<a href="https://github.com" target="_blank" rel="external">注册</a>）<br><img src="http://img.blog.csdn.net/20150511162715567" alt=""></p>
+<p>6、share到Github（VCS&gt;Import into Version Control&gt;Share Project on GitHub）<br><img src="http://img.blog.csdn.net/20150511163114856" alt=""></p>
+<p>7、添加仓库名称和描述<br><img src="http://img.blog.csdn.net/20150511162114473" alt=""></p>
+<p>8、选择要提交的文件，并对此次提交做一个描述，<strong>对比第四步的note，是不是发现我们ignore掉的文件都没在此出现！</strong><br><img src="http://img.blog.csdn.net/20150511162602497" alt=""></p>
+<p>9、登陆Github，查看仓库<br><img src="http://img.blog.csdn.net/20150511162707021" alt=""></p>
+<h2 id=""><br></h2><p><br><br>既然Github是用来分布式控制版本系统，那我们如何将已经上传到Github的项目<code>Clone</code>到本地呢<br>1、<code>VCS-&gt;Checkout from Version Control-&gt;GitHub</code>,如图选择想要克隆的项目，设置好目录和项目名称，点击<code>Clone</code>即可。Android Studio 会在本地新建一个Project.<br><img src="http://img.blog.csdn.net/20150511163141270" alt=""></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -114,7 +142,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/android自定义/">android自定义</a>
+  <span></span> <a href="/tags/Git使用/">Git使用</a>
   </div>
 
 </div>
@@ -123,7 +151,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.dreamxuwj.com/2015/05/21/自定义带动画button/" data-title="自定义带动画button | 梦痕" data-tsina="null" class="share clearfix">
+	  <div data-url="http://www.dreamxuwj.com/2015/06/11/Android Studio中如何使用Git和Github来管理项目/" data-title="AndroidStudio中如何使用Git和Github来管理项目 | 梦痕" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -136,19 +164,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/05/26/android反编译APK的那些事/" title="android反编译APK的那些事">
-  <strong>上一篇：</strong><br/>
-  <span>
-  android反编译APK的那些事</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/05/16/梦的起点/"  title="梦的起点">
+<a href="/2015/05/28/android studio离线更新/"  title="android studio离线更新">
  <strong>下一篇：</strong><br/> 
- <span>梦的起点
+ <span>android studio离线更新
 </span>
 </a>
 </div>
@@ -157,7 +177,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/05/21/自定义带动画button/" data-title="自定义带动画button" data-url="http://www.dreamxuwj.com/2015/05/21/自定义带动画button/"></div>
+	<div class="ds-thread" data-thread-key="2015/06/11/Android Studio中如何使用Git和Github来管理项目/" data-title="AndroidStudio中如何使用Git和Github来管理项目" data-url="http://www.dreamxuwj.com/2015/06/11/Android Studio中如何使用Git和Github来管理项目/"></div>
 </section>
 
 
@@ -167,7 +187,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol>
  
   </div>
 
