@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人走到任何境地都是因为自己]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-07-13T16:11:41.109Z</updated>
+  <updated>2015-08-01T08:51:55.725Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[unable to load VirtualBox engine错误（系统为window 7）]]></title>
+    <link href="http://www.dreamxuwj.com/2015/07/16/unable%20to%20load%20VirtualBox%20engine%E9%94%99%E8%AF%AF%EF%BC%88%E7%B3%BB%E7%BB%9F%E4%B8%BAwindow%207%EF%BC%89/"/>
+    <id>http://www.dreamxuwj.com/2015/07/16/unable to load VirtualBox engine错误（系统为window 7）/</id>
+    <published>2015-07-15T17:13:08.000Z</published>
+    <updated>2015-08-01T08:51:55.725Z</updated>
+    <content type="html"><![CDATA[<p>在使用Genymotion的过程中，碰到了unable to load VirtualBox engine错误，google了好久，最后才解决，特别坑，在此做个小记录。<br><a id="more"></a></p>
+<ol>
+<li>错误如下图所示：<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/error.png" alt=""><br><br></li>
+<li>解决方法很简单，只要改下软件的兼容性就好了(右键-&gt;属性-&gt;兼容性-&gt;选windows vista)<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/QQ图片20150729172338.png" alt=""></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在使用Genymotion的过程中，碰到了unable to load VirtualBox engine错误，google了好久，最后才解决，特别坑，在此做个小记录。<br>]]>
+    
+    </summary>
+    
+      <category term="Genymotion" scheme="http://www.dreamxuwj.com/tags/Genymotion/"/>
+    
+      <category term="错误集" scheme="http://www.dreamxuwj.com/categories/%E9%94%99%E8%AF%AF%E9%9B%86/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[开源总结（一）：EventBus的使用和源码分析]]></title>
