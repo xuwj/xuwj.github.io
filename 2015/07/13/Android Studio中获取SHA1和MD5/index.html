@@ -4,28 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>开源总结（一）：EventBus的使用和源码分析 | 梦痕</title>
+    <title>Android Studio中获取SHA1和MD5 | 梦痕</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="dream.xuwj">
     
 
     
-    <meta name="description" content="df 
-df
-df">
+    <meta name="description" content="许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开源总结（一）：EventBus的使用和源码分析">
-<meta property="og:url" content="http://www.dreamxuwj.com/2015/07/13/开源总结（一）：EventBus的使用和源码分析/index.html">
+<meta property="og:title" content="Android Studio中获取SHA1和MD5">
+<meta property="og:url" content="http://www.dreamxuwj.com/2015/07/13/Android Studio中获取SHA1和MD5/index.html">
 <meta property="og:site_name" content="梦痕">
-<meta property="og:description" content="df 
-df
-df">
+<meta property="og:description" content="许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。">
+<meta property="og:image" content="http://7xj4l6.com1.z0.glb.clouddn.com/android_termanil.png">
+<meta property="og:image" content="http://7xj4l6.com1.z0.glb.clouddn.com/sha1_md5.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开源总结（一）：EventBus的使用和源码分析">
-<meta name="twitter:description" content="df 
-df
-df">
+<meta name="twitter:title" content="Android Studio中获取SHA1和MD5">
+<meta name="twitter:description" content="许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。">
 
     
     <link rel="alternative" href="/atom.xml" title="梦痕" type="application/atom+xml">
@@ -85,7 +81,7 @@ df">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/13/开源总结（一）：EventBus的使用和源码分析/" title="开源总结（一）：EventBus的使用和源码分析" itemprop="url">开源总结（一）：EventBus的使用和源码分析</a>
+      <a href="/2015/07/13/Android Studio中获取SHA1和MD5/" title="Android Studio中获取SHA1和MD5" itemprop="url">Android Studio中获取SHA1和MD5</a>
   </h1>
   <p class="article-author">By
        
@@ -105,13 +101,11 @@ df">
 		
 		</div>
 		
-		<blockquote>
-<ul>
-<li>df </li>
-<li>df</li>
-<li>df</li>
-</ul>
-</blockquote>
+		<p>许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。<br><a id="more"></a></p>
+<ol>
+<li>打开android studio自带的命令行，如下图：<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/android_termanil.png" alt=""><br><br></li>
+<li>输入命令<code>keytool -v -list -keystore path</code>（path为你的keystore的路径）<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sha1_md5.png" alt=""></li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -125,7 +119,7 @@ df">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/EventBus/">EventBus</a>
+  <span></span> <a href="/tags/Android-Studio/">Android Studio</a><a href="/tags/MD5/">MD5</a><a href="/tags/SHA1/">SHA1</a>
   </div>
 
 </div>
@@ -134,7 +128,7 @@ df">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.dreamxuwj.com/2015/07/13/开源总结（一）：EventBus的使用和源码分析/" data-title="开源总结（一）：EventBus的使用和源码分析 | 梦痕" data-tsina="null" class="share clearfix">
+	  <div data-url="http://www.dreamxuwj.com/2015/07/13/Android Studio中获取SHA1和MD5/" data-title="Android Studio中获取SHA1和MD5 | 梦痕" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -168,7 +162,7 @@ df">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/13/开源总结（一）：EventBus的使用和源码分析/" data-title="开源总结（一）：EventBus的使用和源码分析" data-url="http://www.dreamxuwj.com/2015/07/13/开源总结（一）：EventBus的使用和源码分析/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/13/Android Studio中获取SHA1和MD5/" data-title="Android Studio中获取SHA1和MD5" data-url="http://www.dreamxuwj.com/2015/07/13/Android Studio中获取SHA1和MD5/"></div>
 </section>
 
 
@@ -221,10 +215,6 @@ df">
 			
 		
 			
-				<li><a href="/tags/EventBus/" title="EventBus">EventBus<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Genymotion/" title="Genymotion">Genymotion<sup>1</sup></a></li>
 			
 		
@@ -234,6 +224,18 @@ df">
 		
 			
 				<li><a href="/tags/studio离线更新/" title="studio离线更新">studio离线更新<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android-Studio/" title="Android Studio">Android Studio<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SHA1/" title="SHA1">SHA1<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MD5/" title="MD5">MD5<sup>1</sup></a></li>
 			
 		
 			

@@ -38,31 +38,27 @@
   </entry>
   
   <entry>
-    <title><![CDATA[开源总结（一）：EventBus的使用和源码分析]]></title>
-    <link href="http://www.dreamxuwj.com/2015/07/13/%E5%BC%80%E6%BA%90%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AEventBus%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>http://www.dreamxuwj.com/2015/07/13/开源总结（一）：EventBus的使用和源码分析/</id>
+    <title><![CDATA[Android Studio中获取SHA1和MD5]]></title>
+    <link href="http://www.dreamxuwj.com/2015/07/13/Android%20Studio%E4%B8%AD%E8%8E%B7%E5%8F%96SHA1%E5%92%8CMD5/"/>
+    <id>http://www.dreamxuwj.com/2015/07/13/Android Studio中获取SHA1和MD5/</id>
     <published>2015-07-12T17:13:08.000Z</published>
-    <updated>2015-07-13T16:11:41.109Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<ul>
-<li>df </li>
-<li>df</li>
-<li>df</li>
-</ul>
-</blockquote>
+    <updated>2015-09-01T06:28:07.755Z</updated>
+    <content type="html"><![CDATA[<p>许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。<br><a id="more"></a></p>
+<ol>
+<li>打开android studio自带的命令行，如下图：<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/android_termanil.png" alt=""><br><br></li>
+<li>输入命令<code>keytool -v -list -keystore path</code>（path为你的keystore的路径）<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sha1_md5.png" alt=""></li>
+</ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<ul>
-<li>df </li>
-<li>df</li>
-<li>df</li>
-</ul>
-</blockquote>
-]]>
+    <![CDATA[<p>许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。<br>]]>
+    
     </summary>
     
-      <category term="EventBus" scheme="http://www.dreamxuwj.com/tags/EventBus/"/>
+      <category term="Android Studio" scheme="http://www.dreamxuwj.com/tags/Android-Studio/"/>
+    
+      <category term="MD5" scheme="http://www.dreamxuwj.com/tags/MD5/"/>
+    
+      <category term="SHA1" scheme="http://www.dreamxuwj.com/tags/SHA1/"/>
     
       <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     
