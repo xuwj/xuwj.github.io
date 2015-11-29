@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Everything that you've learnt and all the hardships you've suffered will all come in handy at some point in your life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-11-17T03:05:28.738Z</updated>
+  <updated>2015-11-29T10:43:33.952Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -15,22 +15,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Gradle查询/排除依赖]]></title>
-    <link href="http://www.dreamxuwj.com/2015/11/17/Gradle%E6%9F%A5%E8%AF%A2-%E6%8E%92%E9%99%A4%E4%BE%9D%E8%B5%96/"/>
-    <id>http://www.dreamxuwj.com/2015/11/17/Gradle查询-排除依赖/</id>
-    <published>2015-11-17T02:59:46.000Z</published>
-    <updated>2015-11-17T03:05:28.738Z</updated>
-    <content type="html"><![CDATA[<p>使用Gradle编译项目时，可使用此排查依赖包冲突。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看项目库依赖</span></span><br><span class="line">gradle -q <span class="keyword">dependencies</span> plugin_framework:<span class="keyword">dependencies</span> —configuration <span class="keyword">compile</span></span><br></pre></td></tr></table></figure></p>
+    <title><![CDATA[如何用好Google、百度等搜索引擎]]></title>
+    <link href="http://www.dreamxuwj.com/2015/11/28/%E5%A6%82%E4%BD%95%E7%94%A8%E5%A5%BDGoogle%E3%80%81%E7%99%BE%E5%BA%A6%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    <id>http://www.dreamxuwj.com/2015/11/28/如何用好Google、百度等搜索引擎/</id>
+    <published>2015-11-28T02:59:46.000Z</published>
+    <updated>2015-11-29T10:43:33.952Z</updated>
+    <content type="html"><![CDATA[<h1 id="背景">背景</h1><ol>
+<li>互联网工作者，每天的查阅资料是必不可少的，有人Google（天朝原因,需翻墙）、有人百度、有人好搜etc. 每个人都有自己喜欢用的搜索引擎，然而很多人确只会简单的小白式搜索，白白浪费很多时间。<a id="more"></a></li>
+<li>一段时间在技术社区吹水，却被很多人误以为大神（实际我也是刚毕业的小菜鸟，只不过走的路多了几步、喜欢吹点水而已），导致很多人私聊问问题，虽然自己也经常耐心帮忙，但实在对他们的问题无语，很多一百度第一条就是答案的问题他们也问，叫他们自己百度，他们说查不到。。瞬间我就无语了<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/mood.jpg" alt=""></li>
+<li>一直牢记<code>授人以鱼，不如授之以渔</code>,所以最常说的一句话就是自己Google，或者把想好的关键字给他们，让他们自己Google，个人比较反感直接给答案链接的<br>废话好像说的有点多，下面直接进入正题，做为一个互联网工作者，如何用好Google、baidu etc.</li>
+<li>最好用Google，developer用百度简直就是在浪费生命</li>
+</ol>
+<h1 id="关键字">关键字</h1><p>也许会有人奇怪为什么我把关键字排在了这么前面。懂搜索的人都知道，会提取关键字和不会提取关键字简直不在同一水平。要想查到高质量的结果，就要有把术语和俗称进行转换的能力，也就是关键字提取能力。另外，经过自己一段时间的检验，在搜索中加入一些比较靠谱的相关领域的大牛或者专家名字，得到的结果质量会高很多。</p>
+<h1 id="基本搜索+_-_OR等">基本搜索+ - OR等</h1><ul>
+<li><p><code>+（空格）作用：关键字的与操作</code><br>例、要下载window8系统，如何搜索会更好？</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>+<span class="number">8</span>+下载（<span class="built_in">window</span> <span class="number">8</span> 下载）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>-</code><br>减号代表搜索不包含减号后面的词的页面。使用这个指令时减号前面必须是空格，减号后面没有空格，紧跟着需要排除的词。Google 和bd都支持这个指令。<br>例：搜索 -引擎<br>返回的则是包含“搜索”这个词，却不包含“引擎”这个词的结果</p>
+</li>
+<li><p><code>OR（不能用小写）</code> 表示或的意思</p>
+</li>
+<li><p><code>关键字</code><br>GOOGLE的关键字可以是词组（中间没有空格），也可以是句子（中间有空格），但是，用句子做关键字，必须加<code>英文引号</code>。</p>
+</li>
+<li><p><code>星号</code><br>星号<em>是常用的通配符，也可以用在搜索中。百度不支持</em>号搜索指令。<br>比如在Google 中搜索：搜索<em>擎其中的</em>号代表任何文字。<br>返回的结果就不仅包含“搜索引擎”，还包含了“搜索收擎”，“搜索巨擎”等内容。</p>
+</li>
+</ul>
+<h1 id="高级搜索">高级搜索</h1><ul>
+<li><p><code>site</code><br>site:是SEO 最熟悉的高级搜索指令，用来搜索某个域名下的所有文件。</p>
+</li>
+<li><p><code>intitle</code><br>intitle: 指令返回的是页面title 中包含关键词的页面。Google 和bd都支持intitle 指令。使用intitle 指令找到的文件是更准确的竞争页面。如果关键词只出现在页面可见文字中，而没有出现在title 中，大部分情况是并没有针对关键词进行优化，所以也不是有力的竞争对手。</p>
+</li>
+<li><p><code>allintitle</code><br>allintitle:搜索返回的是页面标题中包含多组关键词的文件。<br>例：allintitle:SEO 搜索引擎优化<br>相当于：intitle:SEO intitle:搜索引擎优化返回的是标题中中既包含“SEO”，也包含“搜索引擎优化”的页面</p>
+</li>
+<li><p><code>inurl</code><br>inurl: 指令用于搜索查询词出现在url 中的页面。bd和Google 都支持inurl 指令。inurl 指令支持中文和英文。比如搜索：inurl:搜索引擎优化</p>
+</li>
+<li><p><code>allinurl</code><br>与allintitle: 类似。<br>例：allinurl:SEO 搜索引擎优化<br>相当于 ：inurl:SEO inurl:搜索引擎优化</p>
+</li>
+<li><p><code>filetype</code><br>用于搜索特定文件格式。Google 和bd都支持filetype 指令。<br>例：filetype:pdf SEO<br>返回的就是包含SEO 这个关键词的所有pdf 文件。</p>
+</li>
+<li><p><code>link:URL</code><br>列出链接到目标URL的网页清单.<br><code>注：“link”不能与其他语法相混合操作，所以“link:”后面即使有空格，也将被GOOGLE忽略。</code></p>
+</li>
+<li><p><code>related:URL</code><br>列出与目标URL地址有关的网页</p>
+</li>
+<li><p><code>cache:网站名</code><br>cache用来搜索GOOGLE服务器上某页面的缓存，这个功能同“网页快照”，通常用于查找某些已经被删除的死链接网页，相当于使用普通搜索结果页面中的“网页快照”功能。</p>
+</li>
+<li><p><code>allintext:</code><br>搜索文本,但不包括网页标题和链接</p>
+</li>
+<li><p><code>allinlinks</code><br>搜索链接, 不包括文本和标题</p>
+</li>
+<li><p><code>info:URL</code><br>info用来显示与某链接相关的一系列搜索，提供cache、link、related和完全包含该链接的网页的功能。</p>
+</li>
+<li><p><code>time1..time2</code><br>只显示从time1到time2时间段内的内容</p>
+</li>
+</ul>
+<h1 id="一图知搜索">一图知搜索</h1><p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/search.jpg" alt=""></p>
+<p><code>以前用的最多的就是site:pan.baidu.com 当年为舍友贡献了无数资源。。</code><br><code>本地搜索最喜欢的还是Everything，几秒就能查询整个机子。</code></p>
+<h1 id="组合案例">组合案例</h1><h2 id="1、查找微软网站上关于windows2000的安全课题资料">1、查找微软网站上关于windows2000的安全课题资料</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">inurl:</span>security windows2000 <span class="string">site:</span>microsoft.com</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/案例1.png" alt=""></p>
+<h2 id="2、查找Github上关于android标签的例子">2、查找Github上关于android标签的例子</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">inurl:</span>tag android <span class="string">site:</span>github.com</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/android%20demo2.png" alt=""></p>
+<h2 id="3、app-debug_app-debug-unaligned的区别">3、app-debug app-debug-unaligned的区别</h2><figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app-<span class="keyword">debug</span> app-<span class="keyword">debug</span>-unaligned intitle:区别</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/demo%203.png" alt=""></p>
+<h2 id="4、组合技巧">4、组合技巧</h2><p><code>site:.com inurl:blog “post a comment” -”comments closed” -”you must be logged in” “输入你的关键词”</code><br>site:.com 是 指， 只显示.com的网站。<br>如果你想要org的链接，就换成 site:.org<br>inurl:blog 是指博客。<br>“post a comment” -”comments closed” -”you must be logged in”<br>是指， “能够写评论的” 减去“ 关闭评论的” 再减去“ 必须要登录才能写评论的”。</p>
+<h1 id="无翻墙能力者">无翻墙能力者</h1><ol>
+<li><a href="http://www.gycc.com/" title="一定程度上搜索内容和Google一样" target="_blank" rel="external">http://www.gycc.com/</a></li>
+<li><a href="http://www.aol.com/" title="相当于Google的英文搜索" target="_blank" rel="external">http://www.aol.com/</a></li>
+<li>绑定<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">hosts</a></li>
+</ol>
+<h1 id="Ref">Ref</h1><p><a href="http://lifehacker.com/google-tips-and-tricks-every-student-should-know-1508121671" target="_blank" rel="external">http://lifehacker.com/google-tips-and-tricks-every-student-should-know-1508121671</a><br><a href="http://www.zhihu.com/question/20161362" target="_blank" rel="external">http://www.zhihu.com/question/20161362</a><br><a href="http://searchengineland.com/guide/how-to-use-google-to-search" target="_blank" rel="external">http://searchengineland.com/guide/how-to-use-google-to-search</a><br><a href="http://blog.sciencenet.cn/blog-734884-667157.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-734884-667157.html</a><br><a href="http://mashable.com/2011/11/24/google-search-infographic/#MvOOF1h9vsqW" target="_blank" rel="external">http://mashable.com/2011/11/24/google-search-infographic/#MvOOF1h9vsqW</a><br><a href="http://article.yeeyan.org/view/6774/2620" target="_blank" rel="external">http://article.yeeyan.org/view/6774/2620</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>使用Gradle编译项目时，可使用此排查依赖包冲突。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span cl]]>
+    <![CDATA[<h1 id="背景">背景</h1><ol>
+<li>互联网工作者，每天的查阅资料是必不可少的，有人Google（天朝原因,需翻墙）、有人百度、有人好搜etc. 每个人都有自己喜欢用的搜索引擎，然而很多人确只会简单的小白式搜索，白白浪费很多时间。]]>
+    
     </summary>
     
-      <category term="Android" scheme="http://www.dreamxuwj.com/tags/Android/"/>
+      <category term="Google" scheme="http://www.dreamxuwj.com/tags/Google/"/>
     
-      <category term="Gradle" scheme="http://www.dreamxuwj.com/tags/Gradle/"/>
+      <category term="搜索引擎" scheme="http://www.dreamxuwj.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     
-      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+      <category term="百度" scheme="http://www.dreamxuwj.com/tags/%E7%99%BE%E5%BA%A6/"/>
+    
+      <category term="tools" scheme="http://www.dreamxuwj.com/categories/tools/"/>
     
   </entry>
   
