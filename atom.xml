@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Everything that you've learnt and all the hardships you've suffered will all come in handy at some point in your life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2015-11-29T10:43:33.952Z</updated>
+  <updated>2016-01-18T06:03:28.866Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <link href="http://www.dreamxuwj.com/2015/11/28/%E5%A6%82%E4%BD%95%E7%94%A8%E5%A5%BDGoogle%E3%80%81%E7%99%BE%E5%BA%A6%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     <id>http://www.dreamxuwj.com/2015/11/28/如何用好Google、百度等搜索引擎/</id>
     <published>2015-11-28T02:59:46.000Z</published>
-    <updated>2015-11-29T10:43:33.952Z</updated>
+    <updated>2016-01-18T06:03:28.866Z</updated>
     <content type="html"><![CDATA[<h1 id="背景">背景</h1><ol>
 <li>互联网工作者，每天的查阅资料是必不可少的，有人Google（天朝原因,需翻墙）、有人百度、有人好搜etc. 每个人都有自己喜欢用的搜索引擎，然而很多人确只会简单的小白式搜索，白白浪费很多时间。<a id="more"></a></li>
 <li>一段时间在技术社区吹水，却被很多人误以为大神（实际我也是刚毕业的小菜鸟，只不过走的路多了几步、喜欢吹点水而已），导致很多人私聊问问题，虽然自己也经常耐心帮忙，但实在对他们的问题无语，很多一百度第一条就是答案的问题他们也问，叫他们自己百度，他们说查不到。。瞬间我就无语了<br><img src="http://7xj4l6.com1.z0.glb.clouddn.com/mood.jpg" alt=""></li>
-<li>一直牢记<code>授人以鱼，不如授之以渔</code>,所以最常说的一句话就是自己Google，或者把想好的关键字给他们，让他们自己Google，个人比较反感直接给答案链接的<br>废话好像说的有点多，下面直接进入正题，做为一个互联网工作者，如何用好Google、baidu etc.</li>
-<li>最好用Google，developer用百度简直就是在浪费生命</li>
+<li>一直牢记<code>授人以鱼，不如授之以渔</code>,所以最常说的一句话就是自己Google，或者把想好的关键字给他们，让他们自己Google，个人比较反感直接给答案链接的</li>
+<li>最好用Google，developer用百度简直就是在浪费生命<br>废话好像说的有点多，下面直接进入正题，做为一个互联网工作者，如何用好Google</li>
 </ol>
 <h1 id="关键字">关键字</h1><p>也许会有人奇怪为什么我把关键字排在了这么前面。懂搜索的人都知道，会提取关键字和不会提取关键字简直不在同一水平。要想查到高质量的结果，就要有把术语和俗称进行转换的能力，也就是关键字提取能力。另外，经过自己一段时间的检验，在搜索中加入一些比较靠谱的相关领域的大牛或者专家名字，得到的结果质量会高很多。</p>
 <h1 id="基本搜索+_-_OR等">基本搜索+ - OR等</h1><ul>
@@ -81,6 +81,8 @@
 <li><a href="http://www.gycc.com/" title="一定程度上搜索内容和Google一样" target="_blank" rel="external">http://www.gycc.com/</a></li>
 <li><a href="http://www.aol.com/" title="相当于Google的英文搜索" target="_blank" rel="external">http://www.aol.com/</a></li>
 <li>绑定<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">hosts</a></li>
+<li><a href="https://github.com/getlantern/lantern" target="_blank" rel="external">lantern</a></li>
+<li><a href="http://shadowsocks.blogspot.jp/2015/01/shadowsocks.html#gpluscomments" target="_blank" rel="external">自己搭建vps（推荐）</a></li>
 </ol>
 <h1 id="Ref">Ref</h1><p><a href="http://lifehacker.com/google-tips-and-tricks-every-student-should-know-1508121671" target="_blank" rel="external">http://lifehacker.com/google-tips-and-tricks-every-student-should-know-1508121671</a><br><a href="http://www.zhihu.com/question/20161362" target="_blank" rel="external">http://www.zhihu.com/question/20161362</a><br><a href="http://searchengineland.com/guide/how-to-use-google-to-search" target="_blank" rel="external">http://searchengineland.com/guide/how-to-use-google-to-search</a><br><a href="http://blog.sciencenet.cn/blog-734884-667157.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-734884-667157.html</a><br><a href="http://mashable.com/2011/11/24/google-search-infographic/#MvOOF1h9vsqW" target="_blank" rel="external">http://mashable.com/2011/11/24/google-search-infographic/#MvOOF1h9vsqW</a><br><a href="http://article.yeeyan.org/view/6774/2620" target="_blank" rel="external">http://article.yeeyan.org/view/6774/2620</a></p>
 ]]></content>
@@ -314,6 +316,34 @@
     <title><![CDATA[梦的起点]]></title>
     <link href="http://www.dreamxuwj.com/2015/05/16/%E6%A2%A6%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     <id>http://www.dreamxuwj.com/2015/05/16/梦的起点/</id>
+    <published>2015-05-16T15:16:28.000Z</published>
+    <updated>2015-12-09T06:29:24.378Z</updated>
+    <content type="html"><![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br><a id="more"></a></p>
+<h1 id="Blog_name">Blog name</h1><p>截止<code>2015-05-16</code>为止，终于拥有了自己的私人空间。也许是感性，也许是喜欢，自己依然用梦痕来标识自己。域名也任性的选择了<code>dreamxuwj.com</code>，梦——一生相伴。</p>
+<h1 id="About_me">About me</h1><p>student of FJNU ,Focus on mobile develop and know some product design</p>
+<h1 id="In_a_sentence_for_everyone">In a sentence for everyone</h1><p>人走到任何境地都是因为自己</p>
+<h1 id="favorite_sentences">favorite sentences</h1><ol>
+<li>There’s a phrase in Buddhism, ‘Beginner’s mind.’ It’s wonderful to have a beginner’s mind<br>拥有初学者的心态是件了不起的事情。</li>
+<li>Innovation distinguishes between a leader and a follower.<br>领袖和跟风者的区别就在于创新。</li>
+<li>learn how to listen, it’s an art.<br>学会倾听，这是一门艺术！</li>
+</ol>
+<h1 id="Thanks">Thanks</h1><p>感谢搭建网站过程中所给予帮助的两位朋友<a href="http://codemx.cn" target="_blank" rel="external">墨香</a>和<a href="http://chenfuduo.me/" target="_blank" rel="external">菜鸟</a>，也感谢热爱开源和极具分享精神的developer。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br>]]>
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.dreamxuwj.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="随笔生活" scheme="http://www.dreamxuwj.com/categories/%E9%9A%8F%E7%AC%94%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[梦的起点]]></title>
+    <link href="http://www.dreamxuwj.com/2015/05/16/%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86-window%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>http://www.dreamxuwj.com/2015/05/16/技术整理-window的理解/</id>
     <published>2015-05-16T15:16:28.000Z</published>
     <updated>2015-12-09T06:29:24.378Z</updated>
     <content type="html"><![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br><a id="more"></a></p>
