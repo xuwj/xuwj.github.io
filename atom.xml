@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Everything that you've learnt and all the hardships you've suffered will all come in handy at some point in your life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2016-01-18T06:03:28.866Z</updated>
+  <updated>2016-01-19T13:08:06.060Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -13,6 +13,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[开源项目mobile_technology开篇]]></title>
+    <link href="http://www.dreamxuwj.com/2016/01/19/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEmobile_technology%E5%BC%80%E7%AF%87/"/>
+    <id>http://www.dreamxuwj.com/2016/01/19/开源项目mobile_technology开篇/</id>
+    <published>2016-01-19T12:07:28.000Z</published>
+    <updated>2016-01-19T13:08:06.060Z</updated>
+    <content type="html"><![CDATA[<p>个人技术的成长道路上一直伴随着各位前辈的开源项目，因为他们的开源精神，造福了一代又一代的后辈，使我们少走了很多弯路，这大概就是所谓的前人栽树，后人乘凉。 在此，特地向各位前辈道声谢。<br><a id="more"></a></p>
+<h1 id="背景">背景</h1><p><code>2016-1-16</code>，在和技术群里的几个伙伴交流讨论中，萌生了搞个开源项目的想法。于是和伙伴们讨论了下，大家都挺赞同的，于是，开源项目<a href="https://github.com/fanatic-mobile-developer-for-android/mobile_technology" target="_blank" rel="external">mobile_technology</a>诞生了。也许我们不是纯粹的创造者，但在这里，起码我们是一个传播者，传播着开源精神。期待，能为后来者做自己的一份贡献，同时梳理总结下我们的知识。</p>
+<h1 id="目的">目的</h1><ol>
+<li>为开源做一份小的贡献</li>
+<li>构造一个完整的技术学习体系</li>
+<li>打造一个良好的技术交流区</li>
+</ol>
+<h2 id="开发工具">开发工具</h2><ul>
+<li>android studio</li>
+<li>xcode、appcode</li>
+</ul>
+<h2 id="要求">要求</h2><ul>
+<li>遵循开源规范、代码规范</li>
+<li>拥有github账号并熟练使用git</li>
+<li>需提出完善的解决方案并提供封装良好的库和demo</li>
+</ul>
+<h2 id="期待拥抱共同梦想的你">期待拥抱共同梦想的你</h2><h3 id="加入方式">加入方式</h3><blockquote>
+<p>在<a href="https://github.com/fanatic-mobile-developer-for-android/mobile_technology/issues/2" target="_blank" rel="external">issues #2</a>填写你的Github账号和QQ号</p>
+</blockquote>
+<h3 id="交流群">交流群</h3><p>群号：</p>
+<blockquote>
+<p>299402133 </p>
+</blockquote>
+<p>入群验证问题：</p>
+<blockquote>
+<p>Fragment 创建完成后和 Activity 间通信方式？</p>
+</blockquote>
+<h2 id="在这里，你将得到的收获">在这里，你将得到的收获</h2><ol>
+<li>扩大交际圈，得到一群基友</li>
+<li>技术水平、学习能力的提升</li>
+</ol>
+<h2 id="开源目录">开源目录</h2><h3 id="common技术区"><a href="https://github.com/fanatic-mobile-developer-for-android/mobile_technology/tree/master/common" target="_blank" rel="external">common技术区</a></h3><h3 id="android技术区"><a href="https://github.com/fanatic-mobile-developer-for-android/mobile_technology/tree/master/android" target="_blank" rel="external">android技术区</a></h3><h3 id="iOS技术区"><a href="https://github.com/fanatic-mobile-developer-for-android/mobile_technology/tree/master/iOS" target="_blank" rel="external">iOS技术区</a></h3><h1 id="About_me">About me</h1><p>student of FJNU ,Focus on mobile develop and product design</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>个人技术的成长道路上一直伴随着各位前辈的开源项目，因为他们的开源精神，造福了一代又一代的后辈，使我们少走了很多弯路，这大概就是所谓的前人栽树，后人乘凉。 在此，特地向各位前辈道声谢。<br>]]>
+    
+    </summary>
+    
+      <category term="mobile_technology" scheme="http://www.dreamxuwj.com/tags/mobile-technology/"/>
+    
+      <category term="开源" scheme="http://www.dreamxuwj.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="移动开发" scheme="http://www.dreamxuwj.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何用好Google、百度等搜索引擎]]></title>
@@ -316,34 +368,6 @@
     <title><![CDATA[梦的起点]]></title>
     <link href="http://www.dreamxuwj.com/2015/05/16/%E6%A2%A6%E7%9A%84%E8%B5%B7%E7%82%B9/"/>
     <id>http://www.dreamxuwj.com/2015/05/16/梦的起点/</id>
-    <published>2015-05-16T15:16:28.000Z</published>
-    <updated>2015-12-09T06:29:24.378Z</updated>
-    <content type="html"><![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br><a id="more"></a></p>
-<h1 id="Blog_name">Blog name</h1><p>截止<code>2015-05-16</code>为止，终于拥有了自己的私人空间。也许是感性，也许是喜欢，自己依然用梦痕来标识自己。域名也任性的选择了<code>dreamxuwj.com</code>，梦——一生相伴。</p>
-<h1 id="About_me">About me</h1><p>student of FJNU ,Focus on mobile develop and know some product design</p>
-<h1 id="In_a_sentence_for_everyone">In a sentence for everyone</h1><p>人走到任何境地都是因为自己</p>
-<h1 id="favorite_sentences">favorite sentences</h1><ol>
-<li>There’s a phrase in Buddhism, ‘Beginner’s mind.’ It’s wonderful to have a beginner’s mind<br>拥有初学者的心态是件了不起的事情。</li>
-<li>Innovation distinguishes between a leader and a follower.<br>领袖和跟风者的区别就在于创新。</li>
-<li>learn how to listen, it’s an art.<br>学会倾听，这是一门艺术！</li>
-</ol>
-<h1 id="Thanks">Thanks</h1><p>感谢搭建网站过程中所给予帮助的两位朋友<a href="http://codemx.cn" target="_blank" rel="external">墨香</a>和<a href="http://chenfuduo.me/" target="_blank" rel="external">菜鸟</a>，也感谢热爱开源和极具分享精神的developer。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br>]]>
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.dreamxuwj.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="随笔生活" scheme="http://www.dreamxuwj.com/categories/%E9%9A%8F%E7%AC%94%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[梦的起点]]></title>
-    <link href="http://www.dreamxuwj.com/2015/05/16/%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86-window%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>http://www.dreamxuwj.com/2015/05/16/技术整理-window的理解/</id>
     <published>2015-05-16T15:16:28.000Z</published>
     <updated>2015-12-09T06:29:24.378Z</updated>
     <content type="html"><![CDATA[<p>终点之美，属于优胜者；起点之美，属于每个人。自觉地进入起点并调动起自己的美，也便是人生的优胜。<br><a id="more"></a></p>
