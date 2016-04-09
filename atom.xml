@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Everything that you've learnt and all the hardships you've suffered will all come in handy at some point in your life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2016-04-09T17:24:02.226Z</updated>
+  <updated>2016-04-09T17:27:58.764Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.dreamxuwj.com/2016/04/09/android%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
     <id>http://www.dreamxuwj.com/2016/04/09/android事件机制/</id>
     <published>2016-04-08T17:07:03.000Z</published>
-    <updated>2016-04-09T17:24:02.226Z</updated>
+    <updated>2016-04-09T17:27:58.764Z</updated>
     <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br>…<br>废话到此结束。</p>
 <p>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。<br><a id="more"></a></p>
 <h1 id="什么是触摸事件">什么是触摸事件</h1><p>顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段距离，松手。<br>这个过程一般会产生如下几个事件：</p>
@@ -47,7 +47,7 @@
 </ol>
 <p>布局层次如下图所示<br><img src="http://i.imgur.com/dwuwmp6.png" alt=""><br><img src="http://i.imgur.com/r87ZPpd.png" alt=""></p>
 <p>TeacherViewGroup和MonitressViewGroup代码如下，重写了三剑客方法<br><img src="http://i.imgur.com/a8LsHcP.png" alt=""></p>
-<p>HandsomeMyView代码如下，view是没有剑客2（方法）<code>onInterceptTouchEvent</code>的<br><img src="http://i.imgur.com/bMgQyq7.png" alt=""></p>
+<p>HandsomeMyView代码如下，view是没有剑客2（方法）<code>onInterceptTouchEvent()</code>的<br><img src="http://i.imgur.com/bMgQyq7.png" alt=""></p>
 <p>点击<code>帅气的我</code>可以看见log打印如下<br><img src="http://i.imgur.com/p41FZgb.png" alt=""></p>
 <p>可以看见一般事件都有两个过程</p>
 <ul>
@@ -56,12 +56,12 @@
 </ul>
 <p>传递的过程方法：剑客1（dispatchTouchEvent）、剑客2（onInterceptTouchEvent）<br>处理的过程方法：剑客3（onTouchEvent）</p>
 <p>在前面的事件三剑客中细心的同学会发现，他们的返回值都是<code>boolean</code>类型，那么true和false分别代表什么意义呢？<br>在这里我先告诉大家结论，然后在验证这个结论：</p>
-<p><code>dispatchTouchEvent</code>和<code>onInterceptTouchEvent</code></p>
+<p><code>dispatchTouchEvent()</code>和<code>onInterceptTouchEvent()</code></p>
 <ul>
 <li>返回true表示事件被拦截，不继续；</li>
 <li>返回false表示事件不被拦截，继续下一步流程；</li>
 </ul>
-<p><code>onTouchEvent</code></p>
+<p><code>onTouchEvent()</code></p>
 <ul>
 <li>返回true表示事件被处理了，不用传递给上一级视图；</li>
 <li>返回false表示事件交给上一级视图处理；</li>
@@ -69,12 +69,12 @@
 <p>初始情况下他们的默认返回值都为<code>false</code>。</p>
 <p>为了让大家更好的理解，整理视图如下：</p>
 <p><img src="http://i.imgur.com/r5v0xFe.png" alt=""></p>
-<p>假设女班长暗恋帅气的我，自己偷偷帮我完成了任务，这时候事件就被女班长（MonitressViewGroup）的<code>onInterceptTouchEvent</code>方法拦截了，即<code>MonitressViewGroup</code>的<code>onInterceptTouchEvent</code>返回ture，此时Log输出如下<br><img src="http://i.imgur.com/M3VpiHa.png" alt=""></p>
+<p>假设女班长暗恋帅气的我，自己偷偷帮我完成了任务，这时候事件就被女班长（MonitressViewGroup）的<code>onInterceptTouchEvent()</code>方法拦截了，即<code>MonitressViewGroup</code>的<code>onInterceptTouchEvent()</code>返回ture，此时Log输出如下<br><img src="http://i.imgur.com/M3VpiHa.png" alt=""></p>
 <p>整理视图如下：<br><img src="http://i.imgur.com/HcRhyg6.png" alt=""></p>
 <p>同样的，也可以假设老师人比较好，不忍心麻烦学生，自己处理了，这个过程类似女班长处理过程。</p>
 <p>到这里，我想大家对事件的分发、拦截已经有一个比较清楚的认识了。接下来我们来看下事件的处理。</p>
 <p>———————华丽分割线————————-</p>
-<p>我们处理完任务后是需要将完成结果汇报给上级的，也就是帅气的我需要向我亲爱的女班长汇报结果，班长向老师汇报结果。假设我不能按时完成任务，没将任务结果汇报给女班长，也就是HandsomeMyView的<code>onTouchEvent</code>方法返回true（事件被处理了，不用返回给上级），此时Log输出如下，女班长和老师不用继续处理事件了<br><img src="http://i.imgur.com/keessyF.png" alt=""></p>
+<p>我们处理完任务后是需要将完成结果汇报给上级的，也就是帅气的我需要向我亲爱的女班长汇报结果，班长向老师汇报结果。假设我不能按时完成任务，没将任务结果汇报给女班长，也就是HandsomeMyView的<code>onTouchEvent()</code>方法返回true（事件被处理了，不用返回给上级），此时Log输出如下，女班长和老师不用继续处理事件了<br><img src="http://i.imgur.com/keessyF.png" alt=""></p>
 <p>整理视图如下：<br><img src="http://i.imgur.com/eTr8Mzx.png" alt=""></p>
 <p>同样的，女班长和老师也可以不像他们各自的上级汇报，过程类似<code>帅气的我</code>（HandsomeMyView）。</p>
 <h1 id="源码是最好的老师">源码是最好的老师</h1>]]></content>
