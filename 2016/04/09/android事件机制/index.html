@@ -11,14 +11,14 @@
     
 
     
-    <meta name="description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
-什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
+    <meta name="description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。
+看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android触摸事件机制">
 <meta property="og:url" content="http://www.dreamxuwj.com/2016/04/09/android事件机制/index.html">
 <meta property="og:site_name" content="dreamxuwj">
-<meta property="og:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
-什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
+<meta property="og:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。
+看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。">
 <meta property="og:image" content="http://i.imgur.com/Rg3INJ7.png">
 <meta property="og:image" content="http://i.imgur.com/sDIh7us.png">
 <meta property="og:image" content="http://i.imgur.com/Nq5Njwg.png">
@@ -37,8 +37,8 @@
 <meta property="og:image" content="http://i.imgur.com/eTr8Mzx.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android触摸事件机制">
-<meta name="twitter:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
-什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
+<meta name="twitter:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。
+看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。">
 
     
     <link rel="alternative" href="/atom.xml" title="dreamxuwj" type="application/atom+xml">
@@ -118,41 +118,34 @@
 		
 		</div>
 		
-		<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br><br>…<br><br>废话到此结束。<br><br><br>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。</p>
+		<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br>…<br>废话到此结束。</p>
+<p>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。<br><a id="more"></a></p>
 <h1 id="什么是触摸事件">什么是触摸事件</h1><p>顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段距离，松手。<br>这个过程一般会产生如下几个事件：</p>
 <ol>
 <li>点击（Down）事件</li>
 <li>移动（Move）事件</li>
 <li>松手（Up）事件</li>
 </ol>
-<p>Android为我们封装好了一个触摸事件类<code>MotionEvent</code>,上述的三个过程分别对应着<code>MotionEvent</code>中的<code>MotionEvent.ACTION_DOWN</code>、<code>MotionEvent.ACTION_MOVE</code>、<code>MotionEvent.ACTION_UP</code>事件类型，我们可以以此来实现不同的逻辑，即事件的分发处理。所谓触摸事件的分发，实际上可以理解为<code>MotionEvent</code>事件的分发过程，即当一个<code>MotionEvent</code>产生了之后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。<br><br></p>
-<h1 id="事件三剑客">事件三剑客</h1><p>一般事件的分发过程是由事件三剑客（方法）来共同完成的。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> 剑客一：用于事件的分发</span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">public boolean dispathTouchEvent(MotionEvent ev)</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
-<p>/**</p>
-<ul>
-<li>剑客二：在剑客一种被调用，用于事件的拦截<br><em>/<br>public boolean onInterceptTouchEvent(MotionEvent ev)<br><code>
-</code><br>/*</em></li>
-<li>剑客三：在剑客一种被调用，处理点击事件，true：消耗了当前事件  false：当前view无</li>
-<li>法再次接收事件<br>*/<br>public boolean onTouchEvent()(MotionEvent ev)<br>``` </li>
-</ul>
-<p>三剑客的关系如下图所示（以Activity的dispathTouchEvent为例）<br><br><br><img src="http://i.imgur.com/Rg3INJ7.png" alt=""><br>分析可知：<br><br></p>
+<p>Android为我们封装好了一个触摸事件类<code>MotionEvent</code>,上述的三个过程分别对应着<code>MotionEvent</code>中的<code>MotionEvent.ACTION_DOWN</code>、<code>MotionEvent.ACTION_MOVE</code>、<code>MotionEvent.ACTION_UP</code>事件类型，我们可以以此来实现不同的逻辑，即事件的分发处理。所谓触摸事件的分发，实际上可以理解为<code>MotionEvent</code>事件的分发过程，即当一个<code>MotionEvent</code>产生了之后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。</p>
+<h1 id="事件三剑客">事件三剑客</h1><p>一般事件的分发过程是由事件三剑客（方法）来共同完成的。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> 剑客一：用于事件的分发</span><br><span class="line"> <span class="keyword">*</span>/</span><br><span class="line">public boolean dispathTouchEvent(MotionEvent ev)</span><br><span class="line"></span><br><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> 剑客二：在剑客一种被调用，用于事件的拦截</span><br><span class="line"> <span class="keyword">*</span>/ </span><br><span class="line">public boolean onInterceptTouchEvent(MotionEvent ev)</span><br><span class="line"></span><br><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"> <span class="keyword">*</span> 剑客三：在剑客一种被调用，处理点击事件，true：消耗了当前事件  false：当前view无</span><br><span class="line"> <span class="keyword">*</span> 法再次接收事件</span><br><span class="line"> <span class="keyword">*</span>/ </span><br><span class="line">public boolean onTouchEvent()(MotionEvent ev)</span><br></pre></td></tr></table></figure></p>
+<p>三剑客的关系如下图所示（以Activity的dispathTouchEvent为例）<br><img src="http://i.imgur.com/Rg3INJ7.png" alt=""><br>分析可知：</p>
 <ol>
 <li>触摸事件ev类收到点击的ACTION，会回调onUserInteraction方法，一般项目中我们把一些需要用户开始触摸时就需要执行的任务代码放在这里。</li>
 <li>接下来触摸事件ev会传递给Activity窗口绑定的根视图<code>rootView</code>（View/ViewGroup），如果根视图也有子视图，事件ev会一级一级的分发下去，如果在这个过程中ev被消耗了，事件就此结束分发，否则进入步奏3。</li>
 <li>所有的视图布局都没有消耗掉ev事件，就会调用Activity的onTouchEvent()方法。下面会具体讲诉。</li>
 </ol>
-<h1 id="Android界面简析">Android界面简析</h1><p>在具体讲诉前，我们先来了解下的android的界面架构。如果说手机是一个学校，那么手机中的每一个APP（应用）都是学校里的一道道独特风景，正是它们，构成了学校的魅力。而每个APP都是由一个个Activity组成的。<br><br>还是在说废话…<br><br>如下图所示，我们清晰的看到每个<code>Activity</code>都会包含一个<code>Window</code>对象。而<code>window</code>对象通常由<code>PhoneWindow</code>来实现。<code>PhoneWindow</code>将一个<code>DecorView</code>设置为整个应用窗口的根View。它将屏幕分成两部分，一个是TitleView，另一个是<code>ContentView</code>（也就是大家熟悉的ContentView布局）。ContentView是一个ID为<code>content</code>的<code>FrameLayout</code>，而我们一直写的activity_xx.xml布局就是设置在这样一个FrameLayout里。<br><br><br><img src="http://i.imgur.com/sDIh7us.png" alt="3-1"></p>
-<p><br><br><code>DecorView</code>将要显示的具体内容呈现在了<code>PhoneWindow</code>上，这里面的所有View的监听事件（点击、滑动等操作）都通过一个名为<code>WindowManagerService</code>来进行接收（具体可看深入理解android卷三），并通过Activity来回调相应的监听。<br><br><br>为了让大家更好的理解，我们来写一个小demo如下<br><img src="http://i.imgur.com/Nq5Njwg.png" alt=""></p>
-<p>运行结果如图<br><br><br><img src="http://i.imgur.com/adFg1sB.png" alt=""></p>
-<h1 id="小场景，见真理">小场景，见真理</h1><h2 id="场景一">场景一</h2><p><br><br>我们写一个最简单的demo如下<br><img src="http://i.imgur.com/mXY1aPP.png" alt=""><br><br><br>运行程序，点击button，看到log输出如下：<br><img src="http://i.imgur.com/c4PTZqd.png" alt=""><br><br><br>修改dispathTouchEvent，直接<code>return false</code>；<br>运行程序，点击button，是不是看到控制台什么都没有输出。可见事件传递到activity的根视图就被结束分发了。下面来具体探究下这个过程。</p>
-<h2 id="场景二">场景二</h2><p><br><br>假如在大学中，学校交给了数学老师一个任务，老师讲这项任务布置给了女班长，而女班长又将这个任务交给了帅气的我，我千辛万苦的将这个任务完成了，然后交给了女班长觉得不错，女班长觉得完成的不错，夸了帅气的我几句（暗恋上了），然后将任务提交给了老师，老师看了下也觉得完成的不错，就把任务提交给学校了。<br><br><br><br><br>依据上面的场景，我们设计一个场景实例如下<br><br></p>
+<h1 id="Android界面简析">Android界面简析</h1><p>在具体讲诉前，我们先来了解下的android的界面架构。如果说手机是一个学校，那么手机中的每一个APP（应用）都是学校里的一道道独特风景，正是它们，构成了学校的魅力。而每个APP都是由一个个Activity组成的。<br><br>还是在说废话…<br><br>如下图所示，我们清晰的看到每个<code>Activity</code>都会包含一个<code>Window</code>对象。而<code>window</code>对象通常由<code>PhoneWindow</code>来实现。<code>PhoneWindow</code>将一个<code>DecorView</code>设置为整个应用窗口的根View。它将屏幕分成两部分，一个是TitleView，另一个是<code>ContentView</code>（也就是大家熟悉的ContentView布局）。ContentView是一个ID为<code>content</code>的<code>FrameLayout</code>，而我们一直写的activity_xx.xml布局就是设置在这样一个FrameLayout里。<br><img src="http://i.imgur.com/sDIh7us.png" alt="3-1"><br><code>DecorView</code>将要显示的具体内容呈现在了<code>PhoneWindow</code>上，这里面的所有View的监听事件（点击、滑动等操作）都通过一个名为<code>WindowManagerService</code>来进行接收（具体可看深入理解android卷三），并通过Activity来回调相应的监听。<br>为了让大家更好的理解，我们来写一个小demo如下<br><img src="http://i.imgur.com/Nq5Njwg.png" alt=""></p>
+<p>运行结果如图<br><img src="http://i.imgur.com/adFg1sB.png" alt=""></p>
+<h1 id="小场景，见真理">小场景，见真理</h1><h2 id="场景一">场景一</h2><p>我们写一个最简单的demo如下<br><img src="http://i.imgur.com/mXY1aPP.png" alt=""><br>运行程序，点击button，看到log输出如下：<br><img src="http://i.imgur.com/c4PTZqd.png" alt=""><br>修改dispathTouchEvent，直接<code>return false</code>；<br>运行程序，点击button，是不是看到控制台什么都没有输出。可见事件传递到activity的根视图就被结束分发了。下面来具体探究下这个过程。</p>
+<h2 id="场景二">场景二</h2><p>假如在大学中，学校交给了数学老师一个任务，老师讲这项任务布置给了女班长，而女班长又将这个任务交给了帅气的我，我千辛万苦的将这个任务完成了，然后交给了女班长，女班长觉得完成的不错，夸了帅气的我几句（暗恋上了），然后将任务提交给了老师，老师看了下也觉得完成的不错，就把任务提交给学校了。<br>依据上面的场景，我们设计一个场景实例如下</p>
 <ol>
 <li>老师——TeacherViewGroup</li>
 <li>女班长——MonitressViewGroup</li>
 <li>帅气的我——HandsomeMyView</li>
 </ol>
-<p>布局层次如下图所示<br><br><br><img src="http://i.imgur.com/dwuwmp6.png" alt=""><br><br><br><img src="http://i.imgur.com/r87ZPpd.png" alt=""><br><br></p>
-<p>TeacherViewGroup和MonitressViewGroup代码如下，重写了三剑客方法<br><br><br><img src="http://i.imgur.com/a8LsHcP.png" alt=""></p>
-<p>HandsomeMyView代码如下，view是没有剑客2（方法）<code>onInterceptTouchEvent</code>的<br><br><br><img src="http://i.imgur.com/bMgQyq7.png" alt=""></p>
+<p>布局层次如下图所示<br><img src="http://i.imgur.com/dwuwmp6.png" alt=""><br><img src="http://i.imgur.com/r87ZPpd.png" alt=""></p>
+<p>TeacherViewGroup和MonitressViewGroup代码如下，重写了三剑客方法<br><img src="http://i.imgur.com/a8LsHcP.png" alt=""></p>
+<p>HandsomeMyView代码如下，view是没有剑客2（方法）<code>onInterceptTouchEvent</code>的<br><img src="http://i.imgur.com/bMgQyq7.png" alt=""></p>
 <p>点击<code>帅气的我</code>可以看见log打印如下<br><img src="http://i.imgur.com/p41FZgb.png" alt=""></p>
 <p>可以看见一般事件都有两个过程</p>
 <ul>
@@ -175,7 +168,7 @@
 <p>为了让大家更好的理解，整理视图如下：</p>
 <p><img src="http://i.imgur.com/r5v0xFe.png" alt=""></p>
 <p>假设女班长暗恋帅气的我，自己偷偷帮我完成了任务，这时候事件就被女班长（MonitressViewGroup）的<code>onInterceptTouchEvent</code>方法拦截了，即<code>MonitressViewGroup</code>的<code>onInterceptTouchEvent</code>返回ture，此时Log输出如下<br><img src="http://i.imgur.com/M3VpiHa.png" alt=""></p>
-<p>整理视图如下：<br><br><br><img src="http://i.imgur.com/HcRhyg6.png" alt=""></p>
+<p>整理视图如下：<br><img src="http://i.imgur.com/HcRhyg6.png" alt=""></p>
 <p>同样的，也可以假设老师人比较好，不忍心麻烦学生，自己处理了，这个过程类似女班长处理过程。</p>
 <p>到这里，我想大家对事件的分发、拦截已经有一个比较清楚的认识了。接下来我们来看下事件的处理。</p>
 <p>———————华丽分割线————————-</p>
@@ -283,7 +276,7 @@
 			
 		
 			
-				<li><a href="/tags/事件分发、事件拦截/" title="事件分发、事件拦截">事件分发、事件拦截<sup>1</sup></a></li>
+				<li><a href="/tags/Git使用/" title="Git使用">Git使用<sup>1</sup></a></li>
 			
 		
 			
@@ -315,6 +308,10 @@
 			
 		
 			
+				<li><a href="/tags/事件分发、事件拦截/" title="事件分发、事件拦截">事件分发、事件拦截<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/studio离线更新/" title="studio离线更新">studio离线更新<sup>1</sup></a></li>
 			
 		
@@ -328,10 +325,6 @@
 		
 			
 				<li><a href="/tags/MD5/" title="MD5">MD5<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git使用/" title="Git使用">Git使用<sup>1</sup></a></li>
 			
 		
 			
