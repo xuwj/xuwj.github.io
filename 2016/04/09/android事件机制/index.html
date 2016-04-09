@@ -4,22 +4,41 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>dreamxuwj</title>
+    <title>Android触摸事件机制 | dreamxuwj</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="dream.xuwj">
     
 
     
-    <meta name="description" content="Everything that you&apos;ve learnt and all the hardships you&apos;ve suffered will all come in handy at some point in your life.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dreamxuwj">
-<meta property="og:url" content="http://www.dreamxuwj.com/index.html">
+    <meta name="description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
+什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android触摸事件机制">
+<meta property="og:url" content="http://www.dreamxuwj.com/2016/04/09/android事件机制/index.html">
 <meta property="og:site_name" content="dreamxuwj">
-<meta property="og:description" content="Everything that you&apos;ve learnt and all the hardships you&apos;ve suffered will all come in handy at some point in your life.">
+<meta property="og:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
+什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
+<meta property="og:image" content="http://i.imgur.com/Rg3INJ7.png">
+<meta property="og:image" content="http://i.imgur.com/sDIh7us.png">
+<meta property="og:image" content="http://i.imgur.com/Nq5Njwg.png">
+<meta property="og:image" content="http://i.imgur.com/adFg1sB.png">
+<meta property="og:image" content="http://i.imgur.com/mXY1aPP.png">
+<meta property="og:image" content="http://i.imgur.com/c4PTZqd.png">
+<meta property="og:image" content="http://i.imgur.com/dwuwmp6.png">
+<meta property="og:image" content="http://i.imgur.com/r87ZPpd.png">
+<meta property="og:image" content="http://i.imgur.com/a8LsHcP.png">
+<meta property="og:image" content="http://i.imgur.com/bMgQyq7.png">
+<meta property="og:image" content="http://i.imgur.com/p41FZgb.png">
+<meta property="og:image" content="http://i.imgur.com/r5v0xFe.png">
+<meta property="og:image" content="http://i.imgur.com/M3VpiHa.png">
+<meta property="og:image" content="http://i.imgur.com/HcRhyg6.png">
+<meta property="og:image" content="http://i.imgur.com/keessyF.png">
+<meta property="og:image" content="http://i.imgur.com/eTr8Mzx.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dreamxuwj">
-<meta name="twitter:description" content="Everything that you&apos;ve learnt and all the hardships you&apos;ve suffered will all come in handy at some point in your life.">
+<meta name="twitter:title" content="Android触摸事件机制">
+<meta name="twitter:description" content="前言随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着点击、滑动操作，而手机则随着我们的操作给我们展示她的精彩。…废话到此结束。看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。
+什么是触摸事件顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段">
 
     
     <link rel="alternative" href="/atom.xml" title="dreamxuwj" type="application/atom+xml">
@@ -73,12 +92,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/04/09/android事件机制/" title="Android触摸事件机制" itemprop="url">Android触摸事件机制</a>
@@ -92,9 +109,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br><br>…<br><br>废话到此结束。<br><br><br>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是触摸事件"><span class="toc-number">2.</span> <span class="toc-text">什么是触摸事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事件三剑客"><span class="toc-number">3.</span> <span class="toc-text">事件三剑客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android界面简析"><span class="toc-number">4.</span> <span class="toc-text">Android界面简析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小场景，见真理"><span class="toc-number">5.</span> <span class="toc-text">小场景，见真理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#场景一"><span class="toc-number">5.1.</span> <span class="toc-text">场景一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#场景二"><span class="toc-number">5.2.</span> <span class="toc-text">场景二</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源码是最好的老师"><span class="toc-number">6.</span> <span class="toc-text">源码是最好的老师</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br><br>…<br><br>废话到此结束。<br><br><br>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。</p>
 <h1 id="什么是触摸事件">什么是触摸事件</h1><p>顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段距离，松手。<br>这个过程一般会产生如下几个事件：</p>
 <ol>
 <li>点击（Down）事件</li>
@@ -158,14 +182,9 @@
 <p>我们处理完任务后是需要将完成结果汇报给上级的，也就是帅气的我需要向我亲爱的女班长汇报结果，班长向老师汇报结果。假设我不能按时完成任务，没将任务结果汇报给女班长，也就是HandsomeMyView的<code>onTouchEvent</code>方法返回true（事件被处理了，不用返回给上级），此时Log输出如下，女班长和老师不用继续处理事件了<br><img src="http://i.imgur.com/keessyF.png" alt=""></p>
 <p>整理视图如下：<br><img src="http://i.imgur.com/eTr8Mzx.png" alt=""></p>
 <p>同样的，女班长和老师也可以不像他们各自的上级汇报，过程类似<code>帅气的我</code>（HandsomeMyView）。</p>
-<h1 id="源码是最好的老师">源码是最好的老师</h1>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+<h1 id="源码是最好的老师">源码是最好的老师</h1>  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -183,611 +202,47 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.dreamxuwj.com/2016/04/09/android事件机制/" data-title="Android触摸事件机制 | dreamxuwj" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/04/09/android事件机制/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/04/09/android事件机制/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/19/开源项目mobile_technology开篇/" title="开源项目mobile_technology开篇" itemprop="url">开源项目mobile_technology开篇</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-19T12:07:28.000Z" itemprop="datePublished"> Published 2016-01-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>个人技术的成长道路上一直伴随着各位前辈的开源项目，因为他们的开源精神，造福了一代又一代的后辈，使我们少走了很多弯路，这大概就是所谓的前人栽树，后人乘凉。 在此，特地向各位前辈道声谢。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/19/开源项目mobile_technology开篇/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/mobile-technology/">mobile_technology</a><a href="/tags/开源/">开源</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2016/01/19/开源项目mobile_technology开篇/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/01/19/开源项目mobile_technology开篇/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/01/19/开源项目mobile_technology开篇/"  title="开源项目mobile_technology开篇">
+ <strong>下一篇：</strong><br/> 
+ <span>开源项目mobile_technology开篇
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/04/09/android事件机制/" data-title="Android触摸事件机制" data-url="http://www.dreamxuwj.com/2016/04/09/android事件机制/"></div>
+</section>
 
-</footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/11/28/如何用好Google、百度等搜索引擎/" title="如何用好Google、百度等搜索引擎" itemprop="url">如何用好Google、百度等搜索引擎</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-11-28T02:59:46.000Z" itemprop="datePublished"> Published 2015-11-28</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="背景">背景</h1><ol>
-<li>互联网工作者，每天的查阅资料是必不可少的，有人Google（天朝原因,需翻墙）、有人百度、有人好搜etc. 每个人都有自己喜欢用的搜索引擎，然而很多人确只会简单的小白式搜索，白白浪费很多时间。
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/11/28/如何用好Google、百度等搜索引擎/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/tools/">tools</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Google/">Google</a><a href="/tags/搜索引擎/">搜索引擎</a><a href="/tags/百度/">百度</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/11/28/如何用好Google、百度等搜索引擎/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/11/28/如何用好Google、百度等搜索引擎/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/16/unable to load VirtualBox engine错误（系统为window 7）/" title="unable to load VirtualBox engine错误（系统为window 7）" itemprop="url">unable to load VirtualBox engine错误（系统为window 7）</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-15T17:13:08.000Z" itemprop="datePublished"> Published 2015-07-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>在使用Genymotion的过程中，碰到了unable to load VirtualBox engine错误，google了好久，最后才解决，特别坑，在此做个小记录。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/16/unable to load VirtualBox engine错误（系统为window 7）/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/错误集/">错误集</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Genymotion/">Genymotion</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/16/unable to load VirtualBox engine错误（系统为window 7）/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/16/unable to load VirtualBox engine错误（系统为window 7）/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/13/Android Studio中获取SHA1和MD5/" title="Android Studio中获取SHA1和MD5" itemprop="url">Android Studio中获取SHA1和MD5</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-12T17:13:08.000Z" itemprop="datePublished"> Published 2015-07-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>许多Eclipse的朋友刚转android studio，原来在eclipse中很容易就能获取SHA1和MD5，但是转到android studio后，却不懂得如何查看了，以下是本人的一点记录，希望对朋友有帮助。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/13/Android Studio中获取SHA1和MD5/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Android-Studio/">Android Studio</a><a href="/tags/MD5/">MD5</a><a href="/tags/SHA1/">SHA1</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/13/Android Studio中获取SHA1和MD5/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/13/Android Studio中获取SHA1和MD5/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/06/20/Android自定义View总结/" title="Android自定义View总结" itemprop="url">Android自定义View总结</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-06-19T17:07:03.000Z" itemprop="datePublished"> Published 2015-06-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>在android开发中，官方给我们的原生控件往往无法满足我们的需求，这时候我们经常要自定义控件，除了实现功能的需求外，当然也存在着点装逼成分，哈，下面是我关于自定义控件的一些总结。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/06/20/Android自定义View总结/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/自定义控件/">自定义控件</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/06/20/Android自定义View总结/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/20/Android自定义View总结/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/06/11/Android Studio中如何使用Git和Github来管理项目/" title="AndroidStudio中如何使用Git和Github来管理项目" itemprop="url">AndroidStudio中如何使用Git和Github来管理项目</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-06-11T13:35:37.000Z" itemprop="datePublished"> Published 2015-06-11</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>由于本人是个屌丝，还没用起高大尚mac，所以本篇文章介绍的是基于window系统的</p>
-<p>As we know，<code>Git</code>是目前世界上最先进的分布式版本控制系统，而<code>Github</code>是最大的开源社区。在<code>Github</code>上的项目就是使用<code>git</code>来管理的，所以学好<code>Git</code>的使用是很有必要的。下面看具体步骤。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/06/11/Android Studio中如何使用Git和Github来管理项目/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Git使用/">Git使用</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/06/11/Android Studio中如何使用Git和Github来管理项目/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/11/Android Studio中如何使用Git和Github来管理项目/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/28/android studio离线更新/" title="android studio离线更新" itemprop="url">android studio离线更新</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-28T03:53:29.000Z" itemprop="datePublished"> Published 2015-05-28</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="为什么进行离线更新？">为什么进行离线更新？</h1><p>很多软件，要是能在线更新，我想没有哪个人会无聊到自己去更新…废话截止…下面讲原因，原因有二</p>
-<ol>
-<li>生活在天朝，伟大的墙<code>GFW</code>阻拦了我们看世界
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/28/android studio离线更新/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/studio离线更新/">studio离线更新</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/05/28/android studio离线更新/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/05/28/android studio离线更新/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/26/android反编译APK的那些事/" title="android反编译APK的那些事" itemprop="url">android反编译APK的那些事</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-26T11:41:38.000Z" itemprop="datePublished"> Published 2015-05-26</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>反编译工具最新下载地址 <a href="http://download.csdn.net/detail/wei18359100306/8741985">传送门</a><br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/26/android反编译APK的那些事/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/反编译/">反编译</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/05/26/android反编译APK的那些事/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/05/26/android反编译APK的那些事/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/21/自定义带动画button/" title="自定义带动画button" itemprop="url">自定义带动画button</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="dream.xuwj" target="_blank" itemprop="author">dream.xuwj</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-21T14:09:02.000Z" itemprop="datePublished"> Published 2015-05-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://7xj4l6.com1.z0.glb.clouddn.com/sendmsgbtn.gif" alt=""><br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/21/自定义带动画button/#more">阅读全文</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/移动开发/">移动开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/自定义控件/">自定义控件</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/05/21/自定义带动画button/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/05/21/自定义带动画button/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是触摸事件"><span class="toc-number">2.</span> <span class="toc-text">什么是触摸事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事件三剑客"><span class="toc-number">3.</span> <span class="toc-text">事件三剑客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android界面简析"><span class="toc-number">4.</span> <span class="toc-text">Android界面简析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小场景，见真理"><span class="toc-number">5.</span> <span class="toc-text">小场景，见真理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#场景一"><span class="toc-number">5.1.</span> <span class="toc-text">场景一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#场景二"><span class="toc-number">5.2.</span> <span class="toc-text">场景二</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源码是最好的老师"><span class="toc-number">6.</span> <span class="toc-text">源码是最好的老师</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -1004,6 +459,11 @@ $(document).ready(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
   
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
   $(window).resize(function(){
     getSize(); 
     if (myWidth >= 1024) {
@@ -1012,12 +472,69 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -1090,4 +607,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
