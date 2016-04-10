@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Everything that you've learnt and all the hardships you've suffered will all come in handy at some point in your life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dreamxuwj.com/"/>
-  <updated>2016-04-09T17:27:58.764Z</updated>
+  <updated>2016-04-10T10:50:55.814Z</updated>
   <id>http://www.dreamxuwj.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.dreamxuwj.com/2016/04/09/android%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
     <id>http://www.dreamxuwj.com/2016/04/09/android事件机制/</id>
     <published>2016-04-08T17:07:03.000Z</published>
-    <updated>2016-04-09T17:27:58.764Z</updated>
+    <updated>2016-04-10T10:50:55.814Z</updated>
     <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br>…<br>废话到此结束。</p>
 <p>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。<br><a id="more"></a></p>
 <h1 id="什么是触摸事件">什么是触摸事件</h1><p>顾名思义，就是触摸手机屏幕后产生的事件。这时候请你拿出手机，点击屏幕中的某个按钮（不要松手），移动一段距离，松手。<br>这个过程一般会产生如下几个事件：</p>
@@ -38,7 +38,7 @@
 </ol>
 <h1 id="Android界面简析">Android界面简析</h1><p>在具体讲诉前，我们先来了解下的android的界面架构。如果说手机是一个学校，那么手机中的每一个APP（应用）都是学校里的一道道独特风景，正是它们，构成了学校的魅力。而每个APP都是由一个个Activity组成的。<br><br>还是在说废话…<br><br>如下图所示，我们清晰的看到每个<code>Activity</code>都会包含一个<code>Window</code>对象。而<code>window</code>对象通常由<code>PhoneWindow</code>来实现。<code>PhoneWindow</code>将一个<code>DecorView</code>设置为整个应用窗口的根View。它将屏幕分成两部分，一个是TitleView，另一个是<code>ContentView</code>（也就是大家熟悉的ContentView布局）。ContentView是一个ID为<code>content</code>的<code>FrameLayout</code>，而我们一直写的activity_xx.xml布局就是设置在这样一个FrameLayout里。<br><img src="http://i.imgur.com/sDIh7us.png" alt="3-1"><br><code>DecorView</code>将要显示的具体内容呈现在了<code>PhoneWindow</code>上，这里面的所有View的监听事件（点击、滑动等操作）都通过一个名为<code>WindowManagerService</code>来进行接收（具体可看深入理解android卷三），并通过Activity来回调相应的监听。<br>为了让大家更好的理解，我们来写一个小demo如下<br><img src="http://i.imgur.com/Nq5Njwg.png" alt=""></p>
 <p>运行结果如图<br><img src="http://i.imgur.com/adFg1sB.png" alt=""></p>
-<h1 id="小场景，见真理">小场景，见真理</h1><h2 id="场景一">场景一</h2><p>我们写一个最简单的demo如下<br><img src="http://i.imgur.com/mXY1aPP.png" alt=""><br>运行程序，点击button，看到log输出如下：<br><img src="http://i.imgur.com/c4PTZqd.png" alt=""><br>修改dispathTouchEvent，直接<code>return false</code>；<br>运行程序，点击button，是不是看到控制台什么都没有输出。可见事件传递到activity的根视图就被结束分发了。下面来具体探究下这个过程。</p>
+<h1 id="小场景，见真理">小场景，见真理</h1><h2 id="场景一">场景一</h2><p>我们写一个最简单的demo如下<br><img src="http://i.imgur.com/mXY1aPP.png" alt=""><br>运行程序，点击button，看到log输出如下：<br><img src="http://i.imgur.com/c4PTZqd.png" alt=""><br>修改dispathTouchEvent，直接<code>return false</code>；<br>运行程序，点击button，是不是看到控制台什么都没有输出。可见事件传递到activity的根视图就被结束分发了。下面已场景二来具体探究下这个过程。</p>
 <h2 id="场景二">场景二</h2><p>假如在大学中，学校交给了数学老师一个任务，老师讲这项任务布置给了女班长，而女班长又将这个任务交给了帅气的我，我千辛万苦的将这个任务完成了，然后交给了女班长，女班长觉得完成的不错，夸了帅气的我几句（暗恋上了），然后将任务提交给了老师，老师看了下也觉得完成的不错，就把任务提交给学校了。<br>依据上面的场景，我们设计一个场景实例如下</p>
 <ol>
 <li>老师——TeacherViewGroup</li>
@@ -55,6 +55,9 @@
 <li>处理过程 ： 帅气的我（HandsomeMyView）——&gt;女班长（MonitressViewGroup）——&gt;老师（TeacherViewGroup）</li>
 </ul>
 <p>传递的过程方法：剑客1（dispatchTouchEvent）、剑客2（onInterceptTouchEvent）<br>处理的过程方法：剑客3（onTouchEvent）</p>
+<p>为了让大家更好的理解，整理视图如下：</p>
+<p><img src="http://i.imgur.com/r5v0xFe.png" alt=""></p>
+<p>从中我们看出触摸事件ev会按照子View加入ViewGroup先后顺序<code>相反</code>的顺序，依次有机会去消费此触摸事件ev，即最后加入的最先有机会消费此触摸事件（消费的前提是，触摸点在这个子View的视图范围之内）。简而言之，传递由外向内，消费（处理）由内向外。</p>
 <p>在前面的事件三剑客中细心的同学会发现，他们的返回值都是<code>boolean</code>类型，那么true和false分别代表什么意义呢？<br>在这里我先告诉大家结论，然后在验证这个结论：</p>
 <p><code>dispatchTouchEvent()</code>和<code>onInterceptTouchEvent()</code></p>
 <ul>
@@ -67,17 +70,18 @@
 <li>返回false表示事件交给上一级视图处理；</li>
 </ul>
 <p>初始情况下他们的默认返回值都为<code>false</code>。</p>
-<p>为了让大家更好的理解，整理视图如下：</p>
-<p><img src="http://i.imgur.com/r5v0xFe.png" alt=""></p>
-<p>假设女班长暗恋帅气的我，自己偷偷帮我完成了任务，这时候事件就被女班长（MonitressViewGroup）的<code>onInterceptTouchEvent()</code>方法拦截了，即<code>MonitressViewGroup</code>的<code>onInterceptTouchEvent()</code>返回ture，此时Log输出如下<br><img src="http://i.imgur.com/M3VpiHa.png" alt=""></p>
+<h3 id="拦截onInterceptTouchEvent()">拦截onInterceptTouchEvent()</h3><p>假设女班长暗恋帅气的我，自己偷偷帮我完成了任务，这时候事件就被女班长（MonitressViewGroup）的<code>onInterceptTouchEvent()</code>方法拦截了，即<code>MonitressViewGroup</code>的<code>onInterceptTouchEvent()</code>返回ture，此时Log输出如下<br><img src="http://i.imgur.com/M3VpiHa.png" alt=""></p>
 <p>整理视图如下：<br><img src="http://i.imgur.com/HcRhyg6.png" alt=""></p>
 <p>同样的，也可以假设老师人比较好，不忍心麻烦学生，自己处理了，这个过程类似女班长处理过程。</p>
 <p>到这里，我想大家对事件的分发、拦截已经有一个比较清楚的认识了。接下来我们来看下事件的处理。</p>
-<p>———————华丽分割线————————-</p>
-<p>我们处理完任务后是需要将完成结果汇报给上级的，也就是帅气的我需要向我亲爱的女班长汇报结果，班长向老师汇报结果。假设我不能按时完成任务，没将任务结果汇报给女班长，也就是HandsomeMyView的<code>onTouchEvent()</code>方法返回true（事件被处理了，不用返回给上级），此时Log输出如下，女班长和老师不用继续处理事件了<br><img src="http://i.imgur.com/keessyF.png" alt=""></p>
+<h3 id="处理onTouchEvent()">处理onTouchEvent()</h3><p>我们处理完任务后是需要将完成结果汇报给上级的，也就是帅气的我需要向我亲爱的女班长汇报结果，班长向老师汇报结果。假设我不能按时完成任务，没将任务结果汇报给女班长，也就是HandsomeMyView的<code>onTouchEvent()</code>方法返回true（事件被处理了，不用返回给上级），此时Log输出如下，女班长和老师不用继续处理事件了<br><img src="http://i.imgur.com/keessyF.png" alt=""></p>
 <p>整理视图如下：<br><img src="http://i.imgur.com/eTr8Mzx.png" alt=""></p>
 <p>同样的，女班长和老师也可以不像他们各自的上级汇报，过程类似<code>帅气的我</code>（HandsomeMyView）。</p>
-<h1 id="源码是最好的老师">源码是最好的老师</h1>]]></content>
+<h1 id="Ref">Ref</h1><ol>
+<li><a href="http://trinea.github.io/download/pdf/android/PRE_andevcon_mastering-the-android-touch-system.pdf" target="_blank" rel="external">Mastering the Android Touch System</a></li>
+<li>Android群英传<br>…</li>
+</ol>
+]]></content>
     <summary type="html">
     <![CDATA[<h1 id="前言">前言</h1><p>随着科学技术的发展，智能手机早已成为我们当代人身边必不可少的“伙伴”之一，堪比对象女友。每天我们对着手机重复的做着<code>点击</code>、<code>滑动</code>操作，而手机则随着我们的操作给我们展示她的精彩。<br>…<br>废话到此结束。</p>
 <p>看到这里，即使不是作为移动端码农的你也应该知道触摸事件对手机（经典键盘机除外）的重要性了。<br>]]>
